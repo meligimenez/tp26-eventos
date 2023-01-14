@@ -5,6 +5,8 @@ window.onload = function(){
     let destacado = document.querySelectorAll('p');
     let fondo = document.querySelector('body');
     let enlace = document.querySelector('a');
+    let  menu = document.getElementById('menu');
+    let logoDH = document.querySelector('.logoDH');
     
     let nombre = prompt('Ingrese su nombre');
     console.log(nombre);
@@ -31,4 +33,22 @@ window.onload = function(){
     
 
     container.style.display = 'block';
+
+    
+    logoDH.addEventListener('click', () => {
+        menu.classList.toggle('mostrar')
+    });
+
+    logoDH.addEventListener('mouseover', () => {
+        fondo.classList.add('fondo');
+        enlace.style.color = '#E51B3E';
+    });
+
+    menu.addEventListener('mouseout', (e) => {
+        if(!/li|ul|a/.test(e.target.localName)){
+            menu.classList.remove('mostrar')
+        }
+    });
+
+
 }

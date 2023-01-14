@@ -1,10 +1,11 @@
 {
-  "name": "myApp",
+  "name": "tp26-eventos",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/app.js",
   "scripts": {
-    "test": "nodemon src/app.js"
+    "test": "nodemon src/app.js",
+    "dev": "nodemon"
   },
   "keywords": [],
   "author": "",
