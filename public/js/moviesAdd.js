@@ -18,4 +18,47 @@ window.onload = function(){
         titulo.style.color = 'black';
     })
 
+
+    let inputTitulo = document.getElementById('titulo');
+    let estadoSecreto = 0;
+
+    const checkKey = (key) => {
+        switch (true) {
+            case key === "s" && estadoSecreto === 0:
+                ++estadoSecreto;
+                console.log(estadoSecreto)
+                break;
+                case key === "e" && estadoSecreto === 1:
+                    ++estadoSecreto;
+                    console.log(estadoSecreto)
+                    break;
+                    case key === "c" && estadoSecreto === 2:
+                        ++estadoSecreto;
+                        console.log(estadoSecreto)
+                        break;
+                        case key === "r" && estadoSecreto === 3:
+                            ++estadoSecreto;
+                            console.log(estadoSecreto)
+                            break;
+                            case key === "e" && estadoSecreto === 4:
+                                ++estadoSecreto;
+                                console.log(estadoSecreto)
+                                break;
+                                case key === "t" && estadoSecreto === 5:
+                                    ++estadoSecreto;
+                                    console.log(estadoSecreto)
+                                    break;
+                                    case key === "o" && estadoSecreto === 6:
+                                        estadoSecreto;
+                                        alert('SECRETO MÁGICO')
+                                        break;
+            default:
+                estadoSecreto = 0;
+                break;
+        }
+    }
+    
+    inputTitulo.addEventListener('keydown', (e) => {
+        checkKey(e.key)
+    })
 }
